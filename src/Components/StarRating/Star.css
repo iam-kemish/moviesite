@@ -1,0 +1,33 @@
+.StarContainer {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+.ChildContainer {
+    display: flex;
+    gap: 4px;
+}
+.text {
+    line-height : "1",
+    margin: 0;
+    font-size: 1.8rem;
+    color: #fcc419
+}
+.starStyling {
+    display:block;
+    height: 2.5rem;
+    width: 2.5rem;
+    cursor: pointer;
+    
+    transition: all 0.2s;
+}
+.starStyling:hover {
+    transform: scale(1.2)
+}
+.hoverStyling {
+    display:block;
+    height: 2.5rem;
+    width: 2.5rem;
+    cursor: pointer;
+    background-color: red;
+}
