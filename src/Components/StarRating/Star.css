@@ -31,3 +31,25 @@
     cursor: pointer;
     background-color: red;
 }
+@media only screen and (max-width: 500px) {
+    .ChildContainer {
+        display: flex;
+    gap: 0.5px;
+    
+    margin-left: 14px;
+}
+.starStyling {
+    width: 2rem;
+}
+.text {
+    width: 2rem;
+    transform: translate(10px, -10px);
+}
+.StarContainer {
+    display: flex;
+    align-items: center;
+    
+    flex-direction: column;
+    justify-content: center;
+}
+    }

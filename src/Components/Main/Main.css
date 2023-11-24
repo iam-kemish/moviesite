@@ -129,15 +129,22 @@
     justify-content: center;
   }
   
-  /*
-  SPACING SYSTEM (px)
-  2 / 4 / 8 / 12 / 16 / 24 / 32 / 40 / 48 / 64 / 80 / 96 / 128
-  
-  FONT SIZE SYSTEM (px)
-  10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 /52 / 62 / 74 / 86 / 98
-  */
-  
-  /*
-  FULL STAR
-  
- 
+  @media only screen and (max-width: 476px) {
+  .h3 {
+      font-size: 1.2rem!important;
+      
+    }
+    .year {
+      font-size: 1rem;
+    }
+  }
+  @media only screen and (max-width: 420px) {
+  .h3 {
+      font-size: 1.2rem!important;
+      margin-left: -10px;
+    }
+    .year {
+      font-size: 1.2rem;
+      margin-left: -10px;
+    }
+  }

@@ -20,7 +20,7 @@ interface WatchedMovie {
 const WatchMovieList:React.FC<WatchedMovie> = ({movie, ondeleteWatch}) => {
   return (
     <div>
-       <li>
+       <li >
       <img src={movie.poster} alt={`${movie.title} poster`} />
       <h3>{movie.title}</h3>
       <div className='grid'>
@@ -37,12 +37,12 @@ const WatchMovieList:React.FC<WatchedMovie> = ({movie, ondeleteWatch}) => {
           <span>{movie.runtime} min</span>
         </p>
 
-        <button
+        <p
           className="btn-delete"
           onClick={() => ondeleteWatch(movie.imdbRating)}
         >
-          X
-        </button>
+         <span>X</span>
+        </p>
       </div>
     </li>
     </div>
