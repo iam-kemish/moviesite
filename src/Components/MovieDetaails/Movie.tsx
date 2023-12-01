@@ -48,7 +48,7 @@ const Movie: React.FC<ProppedFrom> = ({
 
   const handleAddClick = () => {
     const newMovies = {
-      imdbId: selectId,
+      imdbID: selectId,
       title,
       year,
       poster,

@@ -129,7 +129,7 @@
     justify-content: center;
   }
   
-  @media only screen and (max-width: 476px) {
+  /* @media only screen and (max-width: 476px) {
   .h3 {
       font-size: 1.2rem!important;
       
@@ -147,4 +147,4 @@
       font-size: 1.2rem;
       margin-left: -10px;
     }
-  }
+  } */
