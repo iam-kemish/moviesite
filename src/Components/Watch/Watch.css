@@ -109,33 +109,7 @@
  } 
 
 
-/* @media only screen and (max-width: 660px) {
-  .summary {
-    padding: 1.2rem 2.2rem 1.3rem 2.2rem;
-  }
-  .summary div {
-    font-size: 1rem;
-    gap: 1rem;
-   
-  }
-  .list img {
-    margin-left: -1.5rem;
-    width: 10vh;
-  }
-  .list h3 {
-    font-size: 1.5rem;
-    margin-left: 2.5rem
-  }
-  .grid {
-    display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-direction: column;
-      margin-left: 0.5rem;
-      gap:1rem;
-  }
-}
- */
+
 
 
 
@@ -148,7 +122,7 @@
   .summary div {
  
     gap: 0.5rem;
-   
+   font-size: 1rem;
 }
 .list img {
   margin-left: -1.5rem;

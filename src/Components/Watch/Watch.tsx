@@ -3,14 +3,14 @@ import React from 'react'
 import './Watch.css'
 import WatchMovieList from './WatchMovieList';
 interface Movie {
-  imdbID: string;
+  imdbID: string | null;
   title: string;
-  poster: string;
+  poster: string | null;
   imdbRating: number;
   rating: number;
   runtime: number;
-  userRating: number;
 }
+// console.log(Watch)
 
 interface passedFrom {
     watched : Movie[]
@@ -48,7 +48,7 @@ const Watch:React.FC<passedFrom> = ({watched, avgImdbRating,avgRuntime,avgUserRa
     <ul className="list">
       {
         watched.map((movie) =>{
-          console.log(movie,"Movieeeee")
+        
           return (
             
             <WatchMovieList movie={movie} key={movie.imdbRating} ondeleteWatch={ondeleteWatch}/>

@@ -3,10 +3,10 @@ import "./Movie.css";
 import { useEffect, useState } from "react";
 import Star from "../StarRating/Star";
 interface Movie {
-  imdbID: string;
-  Title: string;
-  Year: string;
-  Poster: string;
+  imdbID: string | null;
+  title: string;
+  year: string | null;
+  poster: string | null;
   imdbRating: number;
   rating: number;
   runtime: number;
@@ -27,7 +27,7 @@ interface MovieData {
 
 interface ProppedFrom {
   onClose: () => void;
-  selectId: null;
+  selectId: null | string;
   KEY: string;
   Loader: boolean;
   // watched: Nmovies[];
@@ -47,14 +47,14 @@ const Movie: React.FC<ProppedFrom> = ({
   const [movie, setMovie] = useState<MovieData>({} as MovieData);
 
   const handleAddClick = () => {
-    const newMovies = {
+    const newMovies: Movie = {
       imdbID: selectId,
       title,
       year,
       poster,
       rating,
       imdbRating: Number(imdbRating),
-      runtime: Number(runtime.split(" ")[0]),
+      runtime: Number(runtime.split(" ")[0])
     };
     onhandleAdd(newMovies);
     onClose();

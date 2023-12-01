@@ -18,11 +18,12 @@ function App() {
   const [query, setQuery] = useState("Godzilla");
   const [movieRating, setmovieRating] = useState(0);
   const [Loader, setLoader] = useState(false);
-  const [selectId, setSelectId] = useState(null);
+  const [selectId, setSelectId] = useState<string | null>(null);
 
-  const handleSelect = (id) => {
+  const handleSelect = (id: string | null) => {
     setSelectId((selectId) => (id === selectId ? null : id));
   };
+  
 
   const handleClose = () => {
     setSelectId(null);

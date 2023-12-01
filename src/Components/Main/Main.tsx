@@ -15,14 +15,15 @@ interface film {
 }
 
 const average = (arr: number[]) =>
-  arr.reduce((acc, cur, i, arr) => acc + cur / arr.length, 0);
+  arr.length > 0 ? arr.reduce((acc, cur) => acc + cur, 0) / arr.length : 0;
 
+ 
 const total = (arr: number[]) => arr.reduce((acc, curr) => acc + curr, 0);
 
 const Main: React.FC<{
   movies: film[];
   Loader: boolean;
-  selectId: null;
+  selectId: null | string;
   onSelect: (selectId: null | string) => void;
   onClose: () => void;
   movieRating: number;

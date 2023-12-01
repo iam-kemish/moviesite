@@ -1,16 +1,13 @@
 
 import React from 'react'
 interface Movie {
-  imdbID: string;
+  imdbID: string | null;
   title: string;
-  poster: string;
+  poster: string | null;
   imdbRating: number;
   rating: number;
   runtime: number;
-  // userRating: number;
 }
-
-
 interface WatchedMovie {
   movie: Movie;
   ondeleteWatch: (id: number) => void;
@@ -21,7 +18,7 @@ const WatchMovieList:React.FC<WatchedMovie> = ({movie, ondeleteWatch}) => {
   return (
     <div>
        <li >
-      <img src={movie.poster} alt={`${movie.title} poster`} />
+      <img src={movie.poster? movie.poster : "unIdentified Poster"} alt={`${movie.title} poster`} />
       <h3>{movie.title}</h3>
       <div className='grid'>
         <p>
